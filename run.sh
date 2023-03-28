@@ -31,3 +31,18 @@ then
     echo "1002"
   fi
 fi
+
+
+# get_folders
+if [ "$operate" == "get_folders" ];
+then
+  if [ "$username" == "" ];
+  then 
+    echo "Warning - empty folders"
+  elif [ "$username" != "user1" ];
+  then 
+    echo "Error - unknown users"
+  else
+    echo "1001|Work|The working files and necessary files are here|2020-07-31 10:00:00|user1"
+  fi
+fi
