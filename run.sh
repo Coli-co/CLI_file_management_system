@@ -78,3 +78,19 @@ then
     echo "Success"
   fi
 fi
+
+
+# upload_file
+if [ "$operate" == "upload_file" ];
+then
+  folder_id="$3"  
+  if [ "$username" != "user1" ];
+  then
+    echo "Error - unknown user"
+  elif [ "$folder_id" != 1002 ];
+  then
+    echo "Error - folder_id not found"
+  else
+    echo "Success"
+  fi
+fi
