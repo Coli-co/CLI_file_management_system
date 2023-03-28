@@ -62,3 +62,19 @@ then
     echo "Success"
   fi
 fi
+
+
+# delete_folder
+if [ "$operate" == "delete_folder" ];
+then
+  folder_id="$3"
+  if [ "$username" != "user1" ];
+  then
+    echo "Error - folder owner not match"
+  elif [ "$folder_id" != 1001 ];
+  then
+    echo "Error - folder doesn’t exist"
+  else
+    echo "Success"
+  fi
+fi
