@@ -113,3 +113,24 @@ then
     echo -e  "1.png|png|the picture for first test case|2020-07-31 10:01:00|user1\n1.tc|tc|first test case for a company|2020-07-31 10:00:40|user1"
   fi
 fi
+
+
+
+#  delete_file
+if [ "$operate" == "delete_file" ];
+then
+  folder_id="$3"
+  file_name="$4"
+  if [ "$username" != "user1" ];
+  then
+    echo "Error - unknown user" 
+  elif [ "$folder_id" != 1002 ];
+  then
+    echo "Error - folder_id not found"
+  elif [ "$file_name" == "" ];
+  then
+    echo "Error - file_name not found"
+  else
+    echo "Success"
+  fi
+fi
