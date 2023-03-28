@@ -46,3 +46,19 @@ then
     echo "1001|Work|The working files and necessary files are here|2020-07-31 10:00:00|user1"
   fi
 fi
+
+
+#  rename_folder
+if [ "$operate" == "rename_folder" ];
+then
+  folder_id="$3"
+  if [ "$username" != "user1" ];
+  then
+    echo "Error - unknown user"
+  elif [ "$folder_id" != 1001 ];
+  then
+    echo "Error - folder_id not found"
+  else
+    echo "Success"
+  fi
+fi
