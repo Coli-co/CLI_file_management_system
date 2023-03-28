@@ -94,3 +94,22 @@ then
     echo "Success"
   fi
 fi
+
+
+# get_files
+if [ "$operate" == "get_files" ];
+then
+  folder_id="$3"
+  if [ $username != "user1" ];
+  then 
+    echo "Error - unknown users"
+  elif [[ $folder_id != ?(-)+([0-9]) ]];
+  then 
+    echo "Warning - empty files"
+  elif [ "$folder_id" != 1002 ];
+  then
+    echo "Error - folder_name not found"
+  else 
+    echo -e  "1.png|png|the picture for first test case|2020-07-31 10:01:00|user1\n1.tc|tc|first test case for a company|2020-07-31 10:00:40|user1"
+  fi
+fi
