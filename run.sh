@@ -48,10 +48,14 @@ then
 fi
 
 
+
+# The following logic uses this variable
+folder_id="$3"
+
+
 #  rename_folder
 if [ "$operate" == "rename_folder" ];
 then
-  folder_id="$3"
   if [ "$username" != "user1" ];
   then
     echo "Error - unknown user"
@@ -67,7 +71,6 @@ fi
 # delete_folder
 if [ "$operate" == "delete_folder" ];
 then
-  folder_id="$3"
   if [ "$username" != "user1" ];
   then
     echo "Error - folder owner not match"
@@ -82,8 +85,7 @@ fi
 
 # upload_file
 if [ "$operate" == "upload_file" ];
-then
-  folder_id="$3"  
+then 
   if [ "$username" != "user1" ];
   then
     echo "Error - unknown user"
@@ -99,7 +101,6 @@ fi
 # get_files
 if [ "$operate" == "get_files" ];
 then
-  folder_id="$3"
   if [ $username != "user1" ];
   then 
     echo "Error - unknown users"
@@ -114,13 +115,12 @@ then
   fi
 fi
 
-
+# delete file logic use additional variable: file_name
+file_name="$4"
 
 #  delete_file
 if [ "$operate" == "delete_file" ];
 then
-  folder_id="$3"
-  file_name="$4"
   if [ "$username" != "user1" ];
   then
     echo "Error - unknown user" 
