@@ -16,3 +16,18 @@ then
     echo 'Success'
   fi
 fi
+
+# create_folder
+if [ "$operate" == "create_folder" ];
+then
+  folder_name="$3"
+  if [ "$username" != "user1" ];
+  then 
+    echo "Error - unknown user"
+  elif [ "$folder_name" == "‘Work’" ];
+  then
+    echo "1001"
+  else
+    echo "1002"
+  fi
+fi
